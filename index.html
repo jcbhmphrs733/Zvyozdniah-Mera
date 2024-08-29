@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="myCanvas"></canvas>
+    <div>
+
+        <div id="measurments">
+            <h3>Measure</h3>
+            <button onclick="measureLine()">line</button>
+            <button onclick="measureCircle()">circle</button>
+        </div>
+        <div id="constructions">
+            <h3>Construct</h3>
+            <button onclick="constructIntersection()">intersection</button>
+            <button onclick="constructCircle()">circle</button>
+        </div>
+        
+    </div>
+
+        <!-- 
+            imported script sources go here v
+            
+            -->
+            
+    <script>
+
+        myCanvas.width = 0.85 * screen.width;
+        myCanvas.height = 0.65 * screen.height;
+        const ctx = myCanvas.getContext('2d');
+
+
+
+        function update() {
+
+        }
+    </script>
+
+
+</body>
+</html>
