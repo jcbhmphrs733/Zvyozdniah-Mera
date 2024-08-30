@@ -1,9 +1,9 @@
 class GraphEditor {
     constructor(viewport, graph) {
-        this.canvas = myCanvas;
+        this.canvas = viewport.canvas;
         this.graph = graph;
         this.mouse
-        this.ctx = myCanvas.getContext("2d");
+        this.ctx = this.canvas.getContext("2d");
         this.#addEventListeners();
     }
 
@@ -14,8 +14,7 @@ class GraphEditor {
 
     #handleMouseDown(evt) {
         if (evt.button == 0) {
-            this.graph.addCoor(this.mouse);
-            console.log(this.mouse)
+            this.graph.addCoor(new Coor(evt.offsetX, evt.offsetY));
         }
     }
 

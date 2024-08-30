@@ -17,4 +17,9 @@ class Graph {
             coor.draw(ctx);
         }
     }
+
+    dispose() {
+        this.coordinates.length = 0;
+        this.lines.length = 0;
+    }
 }
