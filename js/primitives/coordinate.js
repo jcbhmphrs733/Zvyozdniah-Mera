@@ -4,7 +4,7 @@ class Coor {
         this.y = y
     }
 
-    draw(ctx, {size = 8, color = 'white', outline = false, fill = false} = {}) {
+    draw(ctx, {size = 8, color = 'green', outline = false, fill = false} = {}) {
         const radius = size * 0.5;
         ctx.beginPath();
         ctx.fillStyle = color;

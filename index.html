@@ -12,8 +12,10 @@
         
         <div id="measurments">
             <h3>Measure</h3>
-            <button onclick="removeAll()">clear all</button>
-            <button onclick="measureLine()">line</button>
+            <button onclick="removeAll()">Clear All</button>
+            <button onclick="measureLine()">Line</button>
+            <button onclick="measurePoint()">Point</button>
+            <button onclick="finish()">Finish</button>
         </div>
         <div id="constructions">
             <h3>Construct</h3>
@@ -30,6 +32,7 @@
         <script src="js\math\graph.js"></script>
         <script src="js\graphEditor.js"></script>
         <script src="js\viewport.js"></script>
+        <script src="js\primitives\reticle.js"></script>
         
         <script>
             
@@ -66,8 +69,25 @@
                 graph.dispose();
                 update();
             }
+            function measurePoint() {
+                graphEditor.measuring = true;
+                graphEditor.geometry = 'point';
+            }
+            function measureLine() {
+                graphEditor.measuring = true;
+                graphEditor.geometry = 'line';
+            }
+            function finish() {
+                graphEditor.measuring = false;
+            }
 
-            </script>
+
+
+
+
+
+           
+        </script>
 
 
 </body>
